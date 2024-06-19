@@ -10,7 +10,7 @@ Bu proje, SwiftUI kullanarak geliştirilmiş bir iOS uygulamasıdır. GitHub kul
 
 ## Ekran Görüntüleri
 
-![Ekran Kaydı](https://github.com/doguner1/GitImageData/blob/main/GithubFollowes/Ekran%20KaydÄ±%202024-06-19%2017.28.18.mov)
+![Ekran Kaydı](https://github.com/doguner1/GitImageData/blob/main/GithubFollowes/EkranKaydi.mov)
 
 
 ## Kullanılan Mimari ve Yöntemler
