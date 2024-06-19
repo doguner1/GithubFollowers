@@ -4,7 +4,7 @@
 ![GitHub forks](https://img.shields.io/github/forks/{username}/{repo}?style=social)
 ![GitHub stars](https://img.shields.io/github/stars/{username}/{repo}?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/{username}/{repo}?style=social)
-![GitHub repo size](https://img.shields.io/github/repo-size/doguner1/{repo})
+![GitHub repo size](https://img.shields.io/github/repo-size/doguner1/GithubFollowers)
 
 Bu proje, SwiftUI kullanarak geliştirilmiş bir iOS uygulamasıdır. GitHub kullanıcı bilgilerini (takipçiler, takip edilenler vb.) çekmek ve görselleştirmek amacıyla oluşturulmuştur.
 
