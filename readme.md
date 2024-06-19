@@ -1,9 +1,9 @@
 # GitHubFollowers
 
-![GitHub followers](https://img.shields.io/github/followers/{username}?style=social)
-![GitHub forks](https://img.shields.io/github/forks/{username}/{repo}?style=social)
-![GitHub stars](https://img.shields.io/github/stars/{username}/{repo}?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/{username}/{repo}?style=social)
+![GitHub followers](https://img.shields.io/github/followers/doguner1?style=social)
+![GitHub forks](https://img.shields.io/github/forks/doguner1/GithubFollowers?style=social)
+![GitHub stars](https://img.shields.io/github/stars/doguner1/GithubFollowers?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/doguner1/GithubFollowers?style=social)
 ![GitHub repo size](https://img.shields.io/github/repo-size/doguner1/GithubFollowers)
 
 Bu proje, SwiftUI kullanarak geliştirilmiş bir iOS uygulamasıdır. GitHub kullanıcı bilgilerini (takipçiler, takip edilenler vb.) çekmek ve görselleştirmek amacıyla oluşturulmuştur.
