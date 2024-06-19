@@ -33,8 +33,8 @@ Bu proje, SwiftUI ve Combine framework'ünü kullanarak iOS platformunda GitHub 
 
 1. Bu projeyi bilgisayarınıza klonlayın:
    ```bash
-   git clone https://github.com/doguner1/SwiftUILoginScreen.git
-   cd SwiftUILoginScreen
+   git clone https://github.com/doguner1/GithubFollowers.git
+   cd GithubFollowers
 
 2. Xcode'u açın ve projeyi başlatın:
    ```bash
