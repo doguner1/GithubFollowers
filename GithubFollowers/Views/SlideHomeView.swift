@@ -80,59 +80,59 @@ struct SlideHomeView: View {
         .rotationEffect(.degrees(10),anchor: .bottomTrailing)
     }
     var slideView: some View{
-        HStack{
-            
-            ZStack{
-                VStack {
-                    Text("Slide To")
-                     Text("Analyze")
-                } .font(.system(size: 45, weight: .bold))
-                    .foregroundColor(Color.white.opacity(0.25))
-
-            }
-            Image(systemName: "arrow.forward")
-                .padding(.horizontal)
-                
-            
-            
-        }
-        .foregroundStyle(.secondary)
-        .font(.title2)
-        .bold()
-        .offset(x:max(0,dragAmount.width))
-        .gesture(
-            DragGesture()
-                .onChanged{ value in
-                    withAnimation{
-                        let translationWidth = value.translation.width
-                        self.dragAmount.width = min(translationWidth , maxDragAmount)
-                        self.progress = min(1,self.dragAmount.width / maxDragAmount)
-                    }
+                HStack{
                     
-                }
-                .onEnded{ _ in
-                    if self.progress >= 1{
-                        withAnimation{
-                            self.dragAmount = .zero
-                        }
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
-                            withAnimation{
-                                show = true
-                                
-                            }
-                        }
+                    ZStack{
+                        VStack {
+                            Text("Slide To")
+                            Text("Analyze")
+                        } .font(.system(size: 45, weight: .bold))
+                            .foregroundColor(Color.white.opacity(0.25))
                         
-                    }else {
-                        withAnimation (.linear) {
-                            self.dragAmount = .zero
-                            self.progress = 0
-                        }
                     }
+                    Image(systemName: "arrow.forward")
+                        .padding(.horizontal)
                     
                     
                     
                 }
-        )
+                .foregroundStyle(.secondary)
+                .font(.title2)
+                .bold()
+                .offset(x:max(0,dragAmount.width))
+                .gesture(
+                    DragGesture()
+                        .onChanged{ value in
+                            withAnimation{
+                                let translationWidth = value.translation.width
+                                self.dragAmount.width = min(translationWidth , maxDragAmount)
+                                self.progress = min(1,self.dragAmount.width / maxDragAmount)
+                            }
+                            
+                        }
+                        .onEnded{ _ in
+                            if self.progress >= 1{
+                                withAnimation{
+                                    self.dragAmount = .zero
+                                }
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                                    withAnimation{
+                                        show = true
+                                        
+                                    }
+                                }
+                                
+                            }else {
+                                withAnimation (.linear) {
+                                    self.dragAmount = .zero
+                                    self.progress = 0
+                                }
+                            }
+                            
+                            
+                            
+                        }
+                )
     }
 }
 

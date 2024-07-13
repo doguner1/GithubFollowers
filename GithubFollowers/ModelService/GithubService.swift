@@ -5,17 +5,22 @@
 //  Created by qwerty on 19.06.2024.
 //
 
-
 import Foundation
 import Combine
 
+struct GitHubRepository: Decodable {
+    let name: String
+}
+
 class GitHubService: ObservableObject {
     @Published var followers: [GitHubUser] = []
+    @Published var userRepos: [GitHubUser] = []
     @Published var following: [GitHubUser] = []
     @Published var notFollowingBack: [GitHubUser] = []
     @Published var notFollowedBack: [GitHubUser] = []
     @Published var userId: Int?
     @Published var avatarUrl: String?
+    @Published var repositoryNames: [String] = []
 
     private var cancellables = Set<AnyCancellable>()
 
@@ -25,6 +30,20 @@ class GitHubService: ObservableObject {
             self?.calculateNotFollowingBack()
             self?.calculateNotFollowedBack()
         }
+    }
+    
+    func fetchUserRepos(for username: String) {
+        guard let url = URL(string: "https://api.github.com/users/\(username)/repos") else { return }
+
+        URLSession.shared.dataTaskPublisher(for: url)
+            .map { $0.data }
+            .decode(type: [GitHubRepository].self, decoder: JSONDecoder())
+            .replaceError(with: [])
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] repositories in
+                self?.repositoryNames = repositories.map { $0.name }
+            }
+            .store(in: &cancellables)
     }
 
     func fetchFollowing(for username: String) {
@@ -94,3 +113,5 @@ class GitHubService: ObservableObject {
             .store(in: &cancellables)
     }
 }
+
+

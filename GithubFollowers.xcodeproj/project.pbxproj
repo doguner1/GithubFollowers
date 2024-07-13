@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B102BF72C42E74700C58EEF /* GitRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B102BF62C42E74700C58EEF /* GitRepo.swift */; };
 		4BDA626D2C22F1D5006F3C3C /* GithubFollowersApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BDA626C2C22F1D5006F3C3C /* GithubFollowersApp.swift */; };
 		4BDA62712C22F1D7006F3C3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDA62702C22F1D7006F3C3C /* Assets.xcassets */; };
 		4BDA62742C22F1D7006F3C3C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BDA62732C22F1D7006F3C3C /* Preview Assets.xcassets */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B102BF62C42E74700C58EEF /* GitRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitRepo.swift; sourceTree = "<group>"; };
 		4BDA62692C22F1D5006F3C3C /* GithubFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GithubFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BDA626C2C22F1D5006F3C3C /* GithubFollowersApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubFollowersApp.swift; sourceTree = "<group>"; };
 		4BDA62702C22F1D7006F3C3C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 				4BDA629D2C22F25F006F3C3C /* SlideHomeView.swift */,
 				4BDA62A22C22F33F006F3C3C /* MainView.swift */,
 				4BDA62A72C22F8AD006F3C3C /* GitUserView.swift */,
+				4B102BF62C42E74700C58EEF /* GitRepo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			files = (
 				4BDA629E2C22F25F006F3C3C /* SlideHomeView.swift in Sources */,
 				4BDA62A32C22F33F006F3C3C /* MainView.swift in Sources */,
+				4B102BF72C42E74700C58EEF /* GitRepo.swift in Sources */,
 				4BDA62A82C22F8AD006F3C3C /* GitUserView.swift in Sources */,
 				4BDA62982C22F209006F3C3C /* GithubUser.swift in Sources */,
 				4BDA629B2C22F222006F3C3C /* GithubService.swift in Sources */,
@@ -474,7 +478,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GithubFollowers/Preview Content\"";
-				DEVELOPMENT_TEAM = 85ASU83XHG;
+				DEVELOPMENT_TEAM = YL5YL5328S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -482,6 +486,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,7 +508,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"GithubFollowers/Preview Content\"";
-				DEVELOPMENT_TEAM = 85ASU83XHG;
+				DEVELOPMENT_TEAM = YL5YL5328S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -511,6 +516,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

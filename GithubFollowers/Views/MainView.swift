@@ -14,6 +14,7 @@ struct MainView: View {
     @AppStorage("username") var userName = "doguner1"
     @StateObject private var gitHubService = GitHubService()
     @State var isShowingSheet = false
+    @State var isRepoShowing = false
     @State var index : Int = 0
     var body: some View {
         if show {
@@ -36,9 +37,17 @@ struct MainView: View {
                 })
                 Spacer()
                 
+                Button(action: {
+                    isRepoShowing.toggle()
+                }, label: {
+                    Image(systemName: "menucard")
+                })
+                
+                
             }.overlay{
-                Text(userName)
+                Text("userName")
             }
+
             .padding(.bottom,30)
             HStack{
                 VStack{
@@ -149,7 +158,7 @@ struct MainView: View {
                     Button(action: {
                         isShowingSheet.toggle()
                         index = 3
-                        print(gitHubService.avatarUrl)
+                        print(gitHubService.userRepos.count)
                         /*
                         for follower in gitHubService.notFollowedBack {
                             let login = follower.avatar_url
@@ -176,10 +185,15 @@ struct MainView: View {
                 .sheet(isPresented: $isShowingSheet){
                     GitUserView(username: $userName, index: $index)
                     
-                }.onAppear{
+                }
+                .sheet(isPresented: $isRepoShowing){
+                    GitRepo(githubService: gitHubService)
+                }
+                .onAppear{
                     gitHubService.fetchFollowers(for: userName)
                     gitHubService.fetchFollowing(for: userName)
                     gitHubService.fetchUserIdAndAvatar(for: userName)
+                    gitHubService.fetchUserRepos(for: userName)
                 }
             Spacer()
         }.padding()
