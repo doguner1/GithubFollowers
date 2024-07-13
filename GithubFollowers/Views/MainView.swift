@@ -45,7 +45,7 @@ struct MainView: View {
                 
                 
             }.overlay{
-                Text("userName")
+                Text(userName)
             }
 
             .padding(.bottom,30)
